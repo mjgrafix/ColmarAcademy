@@ -3,9 +3,14 @@ html {
   font-family: 'Muli', sans-serif;
   font-weight: 400;
 }
+
 h2 {
   font-size: 2.5rem;
   font-weight: 800;
+}
+
+a {
+  font-size: 0.875rem;
 }
 /* navigation */
 .navigation {
@@ -32,7 +37,6 @@ h2 {
 }
 
 nav span {
-  font-size: 0.875rem;
   margin-right: 1rem;
 }
 
@@ -105,6 +109,12 @@ nav span:last-child {
   padding-bottom: 0.5rem;
 }
 
+@media only screen and (max-width: 1024px) {
+  .banner h2 {
+    font-size: 2rem;
+  }
+}
+
 @media only screen and (max-width: 760px) {
   .banner {
     width: 100%;
@@ -114,6 +124,7 @@ nav span:last-child {
 
   .banner img {
     width: 100%;
+    height: auto;
     padding: 0;
   }
 
