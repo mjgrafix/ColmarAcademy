@@ -1,12 +1,40 @@
+/*  box sizing fix  */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html {
   font-size: 16px;
   font-family: 'Muli', sans-serif;
   font-weight: 400;
+  color: #404040
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   font-weight: 800;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+p {
+  font-weight: 200;
+  color: grey;
+  line-height: 1.5;
 }
 
 a {
@@ -29,11 +57,7 @@ a {
 
 .logo span {
   font-weight: 700;
-  color: black;
-}
-.logo p {
-  font-weight: 200;
-  color: grey;
+  color: #404040
 }
 
 nav span {
@@ -81,21 +105,21 @@ nav span:last-child {
 .banner img {
   width: 60%;
   height: 60%;
-  padding: 32px 24px;
+  padding: 2rem 1.5rem;
   display: inline;
 }
 
 .banner .content {
   width: 40%;
-  padding-left: 1rem;
-  padding-right: 4.7rem;
-  color: #404040;
+  margin-left: 1rem;
+  margin-right: 4.7rem;
 }
-.banner h2, .banner p {
+
+.banner h1, .banner h5 {
   margin-bottom: 1.5rem;
 }
 
-.banner p {
+.banner h5 {
   line-height: 1.5;
   font-weight: 600;
 }
@@ -110,7 +134,7 @@ nav span:last-child {
 }
 
 @media only screen and (max-width: 1024px) {
-  .banner h2 {
+  .banner h1 {
     font-size: 2rem;
   }
 }
@@ -131,22 +155,115 @@ nav span:last-child {
   .banner .content {
     width: 100%;
     margin: 0 0;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 0;
+    padding: 2rem 0;
   }
 
-  .banner h2, .banner p, .banner .content a{
+  .banner h1, .banner h5, .banner .content a{
     margin-right: 1rem;
     margin-left: 1rem;
   }
 
-  .banner h2 {
+  .banner h1 {
     font-size: 1.75rem;
     line-height: 1.25;
   }
 
   .banner .content a {
     background-color: grey;
+  }
+}
+/*  information  */
+.information {
+  display: flex;
+}
+
+.main {
+  width: 60%;
+  margin-bottom: 2rem;
+}
+
+.main img {
+  width: 100%;
+  height: auto;
+  padding: 2rem 1.5rem;
+}
+
+.main .content{
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.main .content p {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.main .content a {
+  color: #404040;
+}
+
+.item-group {
+  width: 40%;
+  padding: 1rem 1rem;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.item img {
+  width: 35%;
+  height: auto;
+  display: inline;
+}
+
+.item img.mobile {
+  display: none;
+}
+
+.item .content {
+  width: 65%;
+  padding: 0 1rem;
+}
+
+.content p {
+  margin: 0.5rem auto;
+}
+
+.content a {
+  color: #3498DB;
+}
+
+@media only screen and (max-width: 760px) {
+  .main {
+    display: none;
+  }
+
+  .item-group {
+    width: 100%;
+  }
+
+  .item {
+    display: block;
+  }
+
+  .item img, .item p, .item a, .item .content {
+    width: 100%;
+  }
+
+  .item img.desktop {
+    display: none;
+  }
+
+  .item img.mobile {
+    display: block;
+  }
+
+  .item .content {
+    margin: 2rem 0;
   }
 }
