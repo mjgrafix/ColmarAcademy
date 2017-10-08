@@ -25,6 +25,7 @@ h2 {
 h3 {
   font-size: 1.25rem;
   font-weight: 600;
+  line-height: 1.2;
 }
 
 h5 {
@@ -182,7 +183,7 @@ nav span:last-child {
   margin-bottom: 2rem;
 }
 
-.main img {
+.main img, .main video {
   width: 100%;
   height: auto;
   padding: 2rem 1.5rem;
@@ -205,14 +206,14 @@ nav span:last-child {
 
 .item-group {
   width: 40%;
-  padding: 1rem 1rem;
+  padding: 1rem 0;
 }
 
 .item {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
 }
 
 .item img {
@@ -239,7 +240,7 @@ nav span:last-child {
 }
 
 @media only screen and (max-width: 760px) {
-  .main {
+  .information .main {
     display: none;
   }
 
@@ -333,3 +334,35 @@ nav span:last-child {
     background-color: lightgrey;
   }
 }
+/*  thesis exhibit section  */
+.exhibit h2 {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.theses {
+  display: flex;
+}
+
+.exhibit .item-group {
+  padding-top: 2rem;
+}
+
+.exhibit .item:first-child {
+  background-color: lightgrey;
+}
+
+.exhibit .main p {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 760px) {
+  .exhibit .item-group, .exhibit .content {
+    display: none;
+  }
+
+  .exhibit .main {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+/*  footer  */
